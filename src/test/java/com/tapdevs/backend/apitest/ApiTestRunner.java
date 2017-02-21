@@ -39,6 +39,14 @@ public class ApiTestRunner {
         System.out.println(user);
     }
 
+    /* GET */
+    private static void loginUser(){
+        System.out.println("Testing getUser API----------");
+        RestTemplate restTemplate = new RestTemplate();
+        User user = restTemplate.getForObject(REST_SERVICE_URI+"/login/1", User.class);
+        System.out.println(user);
+    }
+
     /* POST */
     private static void createUser() {
         System.out.println("Testing create User API----------");

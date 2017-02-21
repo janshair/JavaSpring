@@ -6,7 +6,7 @@ package com.tapdevs.backend.model;
 public class User {
 
     private long id;
-    private String fullName,userName,password,email;
+    private String fullName,userName,password,email,facebookToken;
 
     public User() {
 
@@ -18,6 +18,9 @@ public class User {
         this.password = password;
         this.email = email;
     }
+
+
+
 
     public long getId() {
         return id;
@@ -57,5 +60,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getFacebookToken() {
+        return facebookToken;
+    }
+
+    public void setFacebookToken(String facebookToken) {
+        this.facebookToken = facebookToken;
     }
 }

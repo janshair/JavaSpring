@@ -51,6 +51,21 @@ public class UserServiceImpl implements UserService{
         return null;
     }
 
+    @Override
+    public User loginUser(String name, String password) {
+
+        for(User user : users){
+            if(user.getFullName().equalsIgnoreCase(name)){
+                if(user.getPassword().equalsIgnoreCase(password)){
+                    return user;
+                }else {
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
+
     public void saveUser(User user) {
         user.setId(counter.incrementAndGet());
         users.add(user);
